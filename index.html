@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starbucks® India</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="phone">
+  <!-- STATUS BAR -->
+  <div class="status-bar">
+    <span id="clock">9:41</span>
+    <div class="status-icons">
+      <svg width="15" height="11" fill="white" viewBox="0 0 15 11"><rect x="0" y="2.5" width="2.5" height="8.5" rx="0.8" opacity="0.35"/><rect x="4" y="1.5" width="2.5" height="9.5" rx="0.8" opacity="0.55"/><rect x="8" y="0.5" width="2.5" height="10.5" rx="0.8" opacity="0.75"/><rect x="12" y="0" width="2.5" height="11" rx="0.8"/></svg>
+      <svg width="15" height="11" fill="white" viewBox="0 0 20 14"><path d="M10 2.5C6.8 2.5 3.9 3.9 1.9 6.1L0 4.2C2.6 1.6 6.1 0 10 0s7.4 1.6 10 4.2l-1.9 1.9C16.1 3.9 13.2 2.5 10 2.5z" opacity="0.35"/><path d="M10 7c-2.2 0-4.2.9-5.6 2.4L2.5 7.5C4.5 5.4 7.1 4 10 4s5.5 1.4 7.5 3.5l-1.9 1.9C14.2 7.9 12.2 7 10 7z" opacity="0.65"/><circle cx="10" cy="13" r="1.8"/></svg>
+      <svg width="24" height="11" fill="white" viewBox="0 0 24 11"><rect x="0" y="0.5" width="20" height="10" rx="2.5" stroke="white" stroke-width="1.2" fill="none" opacity="0.5"/><rect x="1.5" y="2" width="15" height="7" rx="1.5" fill="white"/><path d="M22 3.5v4a1.8 1.8 0 0 0 0-4z" fill="white" opacity="0.6"/></svg>
+    </div>
+  </div>
+
+  <!-- ══════════ PAGE 1: LOGIN ══════════ -->
+  <div class="page active" id="pg-login">
+    <div class="login-orb orb1"></div>
+    <div class="login-orb orb2"></div>
+    <div class="login-orb orb3"></div>
+    <div class="login-inner">
+      <div class="login-logo-wrap">
+        <div class="login-logo">
+          <svg viewBox="0 0 80 80" fill="none">
+            <circle cx="40" cy="40" r="38" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+            <circle cx="40" cy="40" r="30" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+            <path d="M40 12 C28 12 20 24 20 40 C20 56 30 66 40 66 C50 66 60 56 60 40 C60 24 52 12 40 12Z" fill="white" opacity="0.1"/>
+            <path d="M24 37 Q29 30 35 33 Q40 35 40 42 Q40 49 46 47 Q52 45 56 37" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M26 46 Q31 39 36 41 Q41 43 42 50 Q43 54 48 52 Q54 49 58 43" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.55"/>
+            <text x="40" y="60" text-anchor="middle" fill="white" font-size="6.5" font-weight="bold" letter-spacing="1.5" opacity="0.75">STARBUCKS</text>
+          </svg>
+        </div>
+      </div>
+      <h1 class="login-title">Welcome<br>Back</h1>
+      <p class="login-sub">Sign in to order your favourites</p>
+
+      <div class="field-group">
+        <div class="field">
+          <label>Email address</label>
+          <input type="email" id="loginEmail" placeholder="you@example.com">
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="password" id="loginPass" placeholder="••••••••">
+          <span class="field-hint"><a href="#">Forgot?</a></span>
+        </div>
+      </div>
+
+      <button class="cta-btn" id="loginBtn">Sign In</button>
+
+      <div class="or-divider"><span>or</span></div>
+
+      <button class="ghost-btn" id="googleLoginBtn">
+        <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        Continue with Google
+      </button>
+
+      <p class="signup-row">No account? <a href="#" id="goSignupLink">Create one</a></p>
+    </div>
+  </div>
+
+  <!-- ══════════ PAGE 2: HOME / MENU ══════════ -->
+  <div class="page" id="pg-home">
+    <div class="home-header">
+      <div>
+        <p class="home-greeting">Good morning ☀️</p>
+        <h2 class="home-name">Priya</h2>
+      </div>
+      <div class="home-header-right">
+        <div class="stars-pill">⭐ 420 Stars</div>
+        <div class="avatar-circle">P</div>
+      </div>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search-wrap">
+      <svg width="16" height="16" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2"><circle cx="7" cy="7" r="5"/><line x1="11" y1="11" x2="15" y2="15"/></svg>
+      <input class="search-input" type="text" placeholder="Search drinks, food…">
+    </div>
+
+    <!-- CATEGORIES -->
+    <div class="cat-strip" id="catStrip">
+      <div class="cat-chip active" data-cat="all">All</div>
+      <div class="cat-chip" data-cat="frap">Frappuccino</div>
+      <div class="cat-chip" data-cat="latte">Latte</div>
+      <div class="cat-chip" data-cat="cold">Cold Brew</div>
+      <div class="cat-chip" data-cat="tea">Teas</div>
+      <div class="cat-chip" data-cat="food">Food</div>
+    </div>
+
+    <!-- FEATURED BANNER -->
+    <div class="featured-banner">
+      <div class="featured-text">
+        <div class="featured-tag">🔥 Today's Pick</div>
+        <div class="featured-name">Caramel<br>Macchiato</div>
+        <div class="featured-price">from ₹295</div>
+        <button class="featured-btn" data-id="1">Order Now</button>
+      </div>
+      <div class="featured-img">
+        <svg viewBox="0 0 100 160" width="100" height="160">
+          <path d="M20 55 L80 55 L72 145 L28 145 Z" fill="#3d2a1e"/>
+          <path d="M22 68 L78 68 L71 140 L29 140 Z" fill="#7a4a2a"/>
+          <path d="M25 80 L75 80 L69 135 L31 135 Z" fill="#c8860a" opacity="0.6"/>
+          <ellipse cx="50" cy="58" rx="33" ry="13" fill="#f5f0e0"/>
+          <path d="M17 58 Q28 44 40 52 Q50 44 50 52 Q60 40 72 52 Q82 44 83 58" fill="#fffaf0"/>
+          <path d="M24 54 Q35 42 46 50 Q52 43 56 50 Q67 40 76 54" stroke="#c8860a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <rect x="62" y="10" width="5" height="55" rx="2.5" fill="#e8c547" opacity="0.9"/>
+          <rect x="15" y="50" width="70" height="7" rx="3" fill="#4a3728"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- MENU GRID -->
+    <div class="section-header">
+      <span class="section-title">Menu</span>
+      <a href="#" class="see-all">See all</a>
+    </div>
+
+    <div class="menu-grid" id="menuGrid">
+      <!-- populated by JS -->
+    </div>
+
+    <div style="height:80px"></div>
+  </div>
+
+  <!-- ══════════ PAGE 3: PRODUCT DETAIL ══════════ -->
+  <div class="page" id="pg-product">
+    <div class="product-hero">
+      <div class="product-hero-bg"></div>
+      <div class="topbar">
+        <button class="icon-btn" id="productBack">
+          <svg width="10" height="17" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round"><polyline points="9,1 1,8.5 9,16"/></svg>
+        </button>
+        <span class="topbar-title" id="productPageTitle"></span>
+        <button class="icon-btn" id="productFav">
+          <svg width="18" height="17" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="favIcon"><path d="M15.7 2.3a4.5 4.5 0 0 0-6.4 0L9 2.6l-.3-.3a4.5 4.5 0 0 0-6.4 6.4L9 15.9l6.7-7.2a4.5 4.5 0 0 0 0-6.4z"/></svg>
+        </button>
+      </div>
+      <div class="product-drink-display" id="productDrinkSvg"></div>
+    </div>
+
+    <div class="product-sheet">
+      <div class="product-sheet-handle"></div>
+      <div class="product-cat-tag" id="productCatTag"></div>
+      <h2 class="product-name" id="productName"></h2>
+      <p class="product-desc-text" id="productDesc"></p>
+
+      <div class="rating-row">
+        <span class="stars-display">★★★★★</span>
+        <span class="rating-val">4.8</span>
+        <span class="rating-count">(2.4k reviews)</span>
+      </div>
+
+      <!-- SIZE -->
+      <div class="sub-section-label">Choose Size</div>
+      <div class="size-row" id="sizeRow">
+        <div class="size-pill active" data-size="tall" data-extra="0">
+          <div class="size-pill-cup">S</div>
+          <div class="size-pill-name">Tall</div>
+          <div class="size-pill-ml">355ml</div>
+        </div>
+        <div class="size-pill" data-size="grande" data-extra="25">
+          <div class="size-pill-cup">M</div>
+          <div class="size-pill-name">Grande</div>
+          <div class="size-pill-ml">473ml</div>
+        </div>
+        <div class="size-pill" data-size="venti" data-extra="55">
+          <div class="size-pill-cup">L</div>
+          <div class="size-pill-name">Venti</div>
+          <div class="size-pill-ml">710ml</div>
+        </div>
+      </div>
+
+      <!-- CUSTOMISE -->
+      <div class="sub-section-label">Customise</div>
+      <div class="custom-chips" id="customChips">
+        <div class="c-chip active">Whipped Cream</div>
+        <div class="c-chip">Extra Drizzle</div>
+        <div class="c-chip">Oat Milk</div>
+        <div class="c-chip">Almond Milk</div>
+        <div class="c-chip">Extra Shot</div>
+        <div class="c-chip">Less Ice</div>
+      </div>
+
+      <!-- QTY + ADD -->
+      <div class="product-footer">
+        <div class="qty-box">
+          <button class="qty-btn" id="pdMinus">−</button>
+          <span class="qty-num" id="pdQty">1</span>
+          <button class="qty-btn" id="pdPlus">+</button>
+        </div>
+        <button class="add-btn" id="pdAddCart">
+          <svg width="16" height="16" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="23" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          Add to Cart • <span id="pdTotal">₹285</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ PAGE 4: CART ══════════ -->
+  <div class="page" id="pg-cart">
+    <div class="page-header">
+      <button class="icon-btn" id="cartBack">
+        <svg width="10" height="17" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round"><polyline points="9,1 1,8.5 9,16"/></svg>
+      </button>
+      <h3 class="page-header-title">Your Cart</h3>
+      <button class="text-btn" id="clearCartBtn">Clear</button>
+    </div>
+
+    <div class="cart-store-row">
+      <svg width="16" height="16" fill="none" stroke="var(--accent)" stroke-width="2"><circle cx="8" cy="8" r="6"/><path d="M8 4v4l3 1.5"/></svg>
+      <span>Pickup: Connaught Place, New Delhi</span>
+    </div>
+
+    <div class="cart-list" id="cartList">
+      <!-- populated by JS -->
+    </div>
+
+    <div class="cart-empty hidden" id="cartEmpty">
+      <div style="font-size:56px;margin-bottom:12px;">🧋</div>
+      <div style="color:var(--text-muted);font-size:14px;">Your cart is empty</div>
+      <button class="cta-btn" style="margin-top:24px;width:180px" id="cartShopBtn">Browse Menu</button>
+    </div>
+
+    <!-- PROMO -->
+    <div class="promo-row" id="promoRow">
+      <div class="promo-input-wrap">
+        <svg width="16" height="16" fill="none" stroke="var(--accent)" stroke-width="2"><rect x="2" y="7" width="20" height="12" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg>
+        <input class="promo-input" id="promoInput" type="text" placeholder="Promo / Gift card code">
+        <button class="promo-apply" id="promoApply">Apply</button>
+      </div>
+    </div>
+
+    <!-- ORDER SUMMARY -->
+    <div class="order-summary" id="orderSummary">
+      <div class="summary-row"><span>Subtotal</span><span id="sumSubtotal">₹0</span></div>
+      <div class="summary-row"><span>Delivery fee</span><span id="sumDelivery">₹49</span></div>
+      <div class="summary-row discount-row hidden" id="discountRow">
+        <span>Promo discount</span><span id="sumDiscount" style="color:var(--accent)">-₹0</span>
+      </div>
+      <div class="summary-row"><span>Taxes & charges</span><span id="sumTax">₹0</span></div>
+      <div class="summary-divider"></div>
+      <div class="summary-row total-row"><span>Total</span><span id="sumTotal">₹0</span></div>
+    </div>
+
+    <div class="cart-sticky-footer">
+      <button class="cta-btn" id="goCheckoutBtn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- ══════════ PAGE 5: CHECKOUT ══════════ -->
+  <div class="page" id="pg-checkout">
+    <div class="page-header">
+      <button class="icon-btn" id="checkoutBack">
+        <svg width="10" height="17" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round"><polyline points="9,1 1,8.5 9,16"/></svg>
+      </button>
+      <h3 class="page-header-title">Checkout</h3>
+      <div></div>
+    </div>
+
+    <div class="checkout-scroll">
+      <!-- DELIVERY TYPE -->
+      <div class="checkout-section-label">Order Type</div>
+      <div class="order-type-row">
+        <div class="order-type active" data-type="pickup">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <span>Pickup</span>
+        </div>
+        <div class="order-type" data-type="delivery">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16,8 20,8 23,11 23,16 16,16 16,8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <span>Delivery</span>
+        </div>
+      </div>
+
+      <!-- ADDRESS -->
+      <div class="checkout-section-label">Pickup Store</div>
+      <div class="address-card">
+        <div class="address-icon">📍</div>
+        <div class="address-detail">
+          <div class="address-name">Connaught Place</div>
+          <div class="address-sub">Block A, CP, New Delhi — 110001</div>
+          <div class="address-sub">Est. ready in 15 min</div>
+        </div>
+        <button class="change-btn">Change</button>
+      </div>
+
+      <!-- SCHEDULE -->
+      <div class="checkout-section-label">Pickup Time</div>
+      <div class="time-row">
+        <div class="time-chip active">ASAP</div>
+        <div class="time-chip">11:00 AM</div>
+        <div class="time-chip">11:30 AM</div>
+        <div class="time-chip">12:00 PM</div>
+      </div>
+
+      <!-- ORDER ITEMS MINI -->
+      <div class="checkout-section-label">Order Summary</div>
+      <div class="mini-order-list" id="miniOrderList"></div>
+
+      <!-- PAYMENT METHOD -->
+      <div class="checkout-section-label">Payment Method</div>
+      <div class="payment-methods" id="paymentMethods">
+        <div class="pay-method active" data-method="upi">
+          <div class="pay-icon">📱</div>
+          <div class="pay-info">
+            <div class="pay-name">UPI</div>
+            <div class="pay-sub">GPay, PhonePe, Paytm</div>
+          </div>
+          <div class="pay-check"><svg width="12" height="10" fill="none" stroke="white" stroke-width="2.5"><polyline points="1,5 5,9 11,1"/></svg></div>
+        </div>
+        <div class="pay-method" data-method="card">
+          <div class="pay-icon">💳</div>
+          <div class="pay-info">
+            <div class="pay-name">Credit / Debit Card</div>
+            <div class="pay-sub">Visa, Mastercard, Rupay</div>
+          </div>
+          <div class="pay-check"><svg width="12" height="10" fill="none" stroke="white" stroke-width="2.5"><polyline points="1,5 5,9 11,1"/></svg></div>
+        </div>
+        <div class="pay-method" data-method="sbux">
+          <div class="pay-icon">⭐</div>
+          <div class="pay-info">
+            <div class="pay-name">Starbucks Card</div>
+            <div class="pay-sub">Balance: ₹1,240</div>
+          </div>
+          <div class="pay-check"><svg width="12" height="10" fill="none" stroke="white" stroke-width="2.5"><polyline points="1,5 5,9 11,1"/></svg></div>
+        </div>
+        <div class="pay-method" data-method="cod">
+          <div class="pay-icon">💵</div>
+          <div class="pay-info">
+            <div class="pay-name">Cash on Pickup</div>
+            <div class="pay-sub">Pay when you collect</div>
+          </div>
+          <div class="pay-check"><svg width="12" height="10" fill="none" stroke="white" stroke-width="2.5"><polyline points="1,5 5,9 11,1"/></svg></div>
+        </div>
+      </div>
+
+      <!-- SPECIAL INSTRUCTIONS -->
+      <div class="checkout-section-label">Special Instructions</div>
+      <textarea class="special-note" placeholder="Any special requests? (e.g. less sugar, extra hot…)" rows="3"></textarea>
+
+      <!-- TOTALS -->
+      <div class="checkout-total-card">
+        <div class="ct-row"><span>Subtotal</span><span id="ct-sub">₹0</span></div>
+        <div class="ct-row"><span>Delivery / Pickup</span><span id="ct-delivery">₹0</span></div>
+        <div class="ct-row"><span>GST (5%)</span><span id="ct-tax">₹0</span></div>
+        <div class="ct-divider"></div>
+        <div class="ct-row ct-total"><span>Amount to Pay</span><span id="ct-total">₹0</span></div>
+      </div>
+
+      <div style="height:100px"></div>
+    </div>
+
+    <div class="cart-sticky-footer">
+      <button class="cta-btn" id="goPayBtn">Pay Now • <span id="payBtnAmt">₹0</span></button>
+    </div>
+  </div>
+
+  <!-- ══════════ PAGE 6: PAYMENT ══════════ -->
+  <div class="page" id="pg-payment">
+    <div class="page-header">
+      <button class="icon-btn" id="paymentBack">
+        <svg width="10" height="17" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round"><polyline points="9,1 1,8.5 9,16"/></svg>
+      </button>
+      <h3 class="page-header-title">Payment</h3>
+      <div></div>
+    </div>
+
+    <div class="payment-scroll">
+      <!-- UPI SECTION -->
+      <div id="upiSection">
+        <div class="payment-amount-display">
+          <div class="pamt-label">Amount to Pay</div>
+          <div class="pamt-val" id="upiPayAmt">₹0</div>
+        </div>
+
+        <div class="checkout-section-label">Enter UPI ID</div>
+        <div class="upi-input-wrap">
+          <svg width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 8v4l2 2"/></svg>
+          <input type="text" class="upi-input" id="upiId" placeholder="yourname@upi">
+        </div>
+
+        <div class="checkout-section-label" style="margin-top:20px">Quick Pay</div>
+        <div class="upi-apps">
+          <div class="upi-app" id="upiGpay">
+            <div class="upi-app-icon" style="background:#4285F4">G</div>
+            <span>GPay</span>
+          </div>
+          <div class="upi-app" id="upiPhone">
+            <div class="upi-app-icon" style="background:#5f259f">P</div>
+            <span>PhonePe</span>
+          </div>
+          <div class="upi-app" id="upiPaytm">
+            <div class="upi-app-icon" style="background:#002970">Pay</div>
+            <span>Paytm</span>
+          </div>
+          <div class="upi-app" id="upiOther">
+            <div class="upi-app-icon" style="background:var(--accent)">+</div>
+            <span>Other</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD SECTION -->
+      <div id="cardSection" class="hidden">
+        <div class="payment-amount-display">
+          <div class="pamt-label">Amount to Pay</div>
+          <div class="pamt-val" id="cardPayAmt">₹0</div>
+        </div>
+
+        <!-- CARD PREVIEW -->
+        <div class="card-preview" id="cardPreview">
+          <div class="card-chip"></div>
+          <div class="card-number" id="cardNumDisplay">•••• •••• •••• ••••</div>
+          <div class="card-bottom">
+            <div>
+              <div class="card-label">Card Holder</div>
+              <div class="card-val" id="cardHolderDisplay">YOUR NAME</div>
+            </div>
+            <div>
+              <div class="card-label">Expires</div>
+              <div class="card-val" id="cardExpDisplay">MM/YY</div>
+            </div>
+            <div class="card-network">VISA</div>
+          </div>
+        </div>
+
+        <div class="card-fields">
+          <div class="field">
+            <label>Card Number</label>
+            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+          </div>
+          <div class="field">
+            <label>Card Holder Name</label>
+            <input type="text" id="cardHolder" placeholder="As on card">
+          </div>
+          <div class="card-row-2">
+            <div class="field">
+              <label>Expiry</label>
+              <input type="text" id="cardExp" placeholder="MM/YY" maxlength="5">
+            </div>
+            <div class="field">
+              <label>CVV</label>
+              <input type="password" id="cardCvv" placeholder="•••" maxlength="3">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STARBUCKS CARD SECTION -->
+      <div id="sbuxSection" class="hidden">
+        <div class="sbux-card-display">
+          <div class="sbux-card-logo">⭐ Starbucks Card</div>
+          <div class="sbux-balance-label">Available Balance</div>
+          <div class="sbux-balance">₹1,240</div>
+          <div class="sbux-card-num">**** **** 4892</div>
+        </div>
+        <div class="payment-amount-display" style="margin-top:20px">
+          <div class="pamt-label">Amount to Pay</div>
+          <div class="pamt-val" id="sbuxPayAmt">₹0</div>
+        </div>
+        <div class="sbux-note">Your Starbucks Card balance will be debited instantly upon confirmation.</div>
+      </div>
+
+      <!-- COD SECTION -->
+      <div id="codSection" class="hidden">
+        <div class="cod-illustration">💵</div>
+        <div class="payment-amount-display">
+          <div class="pamt-label">Pay at Store</div>
+          <div class="pamt-val" id="codPayAmt">₹0</div>
+        </div>
+        <p class="sbux-note">Please keep exact change ready. Show your order QR code at the counter.</p>
+      </div>
+
+      <div style="height:100px"></div>
+    </div>
+
+    <div class="cart-sticky-footer">
+      <button class="cta-btn" id="confirmPayBtn">Confirm &amp; Pay</button>
+    </div>
+  </div>
+
+  <!-- ══════════ PAGE 7: ORDER SUCCESS ══════════ -->
+  <div class="page" id="pg-success">
+    <div class="success-inner">
+      <div class="success-ring">
+        <div class="success-check">
+          <svg width="40" height="32" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round"><polyline points="4,16 16,28 36,4"/></svg>
+        </div>
+      </div>
+      <h2 class="success-title">Order Placed!</h2>
+      <p class="success-sub">Your order is being prepared. See you soon ☕</p>
+
+      <div class="order-card">
+        <div class="order-card-row">
+          <span class="oc-label">Order ID</span>
+          <span class="oc-val" id="orderId">#SB24819</span>
+        </div>
+        <div class="order-card-row">
+          <span class="oc-label">Pickup Store</span>
+          <span class="oc-val">Connaught Place</span>
+        </div>
+        <div class="order-card-row">
+          <span class="oc-label">Est. Ready</span>
+          <span class="oc-val">~15 minutes</span>
+        </div>
+        <div class="order-card-row">
+          <span class="oc-label">Amount Paid</span>
+          <span class="oc-val" id="amtPaid">₹0</span>
+        </div>
+      </div>
+
+      <div class="qr-wrap">
+        <svg viewBox="0 0 100 100" width="130" height="130">
+          <rect width="100" height="100" fill="white" rx="8"/>
+          <rect x="10" y="10" width="30" height="30" rx="2" fill="#1a3a2e"/>
+          <rect x="13" y="13" width="24" height="24" rx="1" fill="white"/>
+          <rect x="16" y="16" width="18" height="18" rx="0.5" fill="#1a3a2e"/>
+          <rect x="60" y="10" width="30" height="30" rx="2" fill="#1a3a2e"/>
+          <rect x="63" y="13" width="24" height="24" rx="1" fill="white"/>
+          <rect x="66" y="16" width="18" height="18" rx="0.5" fill="#1a3a2e"/>
+          <rect x="10" y="60" width="30" height="30" rx="2" fill="#1a3a2e"/>
+          <rect x="13" y="63" width="24" height="24" rx="1" fill="white"/>
+          <rect x="16" y="66" width="18" height="18" rx="0.5" fill="#1a3a2e"/>
+          <rect x="45" y="10" width="6" height="6" fill="#1a3a2e"/>
+          <rect x="54" y="10" width="4" height="4" fill="#1a3a2e"/>
+          <rect x="45" y="18" width="4" height="6" fill="#1a3a2e"/>
+          <rect x="52" y="18" width="6" height="4" fill="#1a3a2e"/>
+          <rect x="46" y="46" width="8" height="8" fill="#1a3a2e"/>
+          <rect x="58" y="46" width="6" height="8" fill="#1a3a2e"/>
+          <rect x="68" y="46" width="10" height="6" fill="#1a3a2e"/>
+          <rect x="46" y="58" width="6" height="10" fill="#1a3a2e"/>
+          <rect x="56" y="60" width="10" height="4" fill="#1a3a2e"/>
+          <rect x="70" y="56" width="8" height="8" fill="#1a3a2e"/>
+          <rect x="60" y="68" width="6" height="12" fill="#1a3a2e"/>
+          <rect x="70" y="68" width="10" height="6" fill="#1a3a2e"/>
+          <rect x="70" y="78" width="6" height="10" fill="#1a3a2e"/>
+          <rect x="80" y="72" width="8" height="8" fill="#1a3a2e"/>
+        </svg>
+        <p class="qr-label">Show this QR at the counter</p>
+      </div>
+
+      <div class="success-stars">🌟 You earned <strong>+42 Stars</strong> on this order!</div>
+
+      <button class="cta-btn" id="backToHomeBtn" style="width:100%;margin-top:20px">Back to Home</button>
+    </div>
+  </div>
+
+  <!-- BOTTOM NAV (shown on home+product) -->
+  <div class="bottom-nav" id="bottomNav">
+    <div class="bnav-item active" data-page="pg-home">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+      <span>Home</span>
+    </div>
+    <div class="bnav-item" data-page="pg-home">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10" cy="10" r="7"/><line x1="15.5" y1="15.5" x2="20" y2="20"/></svg>
+      <span>Search</span>
+    </div>
+    <div class="bnav-item cart-nav-item" data-page="pg-cart">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="23" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <div class="bnav-badge" id="bnavBadge" style="display:none">0</div>
+      <span>Cart</span>
+    </div>
+    <div class="bnav-item" data-page="pg-home">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>Profile</span>
+    </div>
+  </div>
+
+</div><!-- end .phone -->
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- LOADING OVERLAY -->
+<div class="loading-overlay hidden" id="loadingOverlay">
+  <div class="spinner"></div>
+  <div class="loading-text" id="loadingText">Processing…</div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
