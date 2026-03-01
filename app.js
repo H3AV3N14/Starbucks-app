@@ -492,7 +492,7 @@ function buildPaymentPage() {
   document.getElementById(id).addEventListener('click', () => {
     document.querySelectorAll('.upi-app').forEach(a => a.style.borderColor = '');
     document.getElementById(id).style.borderColor = 'var(--accent)';
-    document.getElementById('upiId').value = id === 'upiGpay' ? 'priya@okaxis' : id === 'upiPhone' ? 'priya@ybl' : id === 'upiPaytm' ? 'priya@paytm' : '';
+    document.getElementById('upiId').value = id === 'upiGpay' ? 'molu@okaxis' : id === 'upiPhone' ? 'molu@ybl' : id === 'upiPaytm' ? 'molu@paytm' : '';
   });
 });
 
